@@ -1,6 +1,14 @@
+import Navbar from "../components/Layout/Navbar";
+import SearchResults from "../components/Search/SearchResults";
+
 const Search = () => {
     return (
-        <>Search</>
+        <>
+            <Navbar />
+            <div className="container mx-auto p-4 h-screen">
+                <SearchResults />
+            </div>
+        </>
     );
 }
 

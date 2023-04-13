@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faCircleQuestion, faArrowRightFromBracket, faUser } from '@fortawesome/free-solid-svg-icons';
 
-import logo from '../assets/logo.png';
+import logo from '../../assets/logo.png';
 
 const Sidebar = () => {
+
     return (
-        <div className="relative bg-downrider h-screen flex justify-center">
+        <div className="relative bg-downrider h-screen flex justify-center sidebar-wrapper">
             <div className="flex flex-col items-center space-y-10 py-6">
                 <div className="flex items-center justify-center rounded-md">
                     <Link to="/">

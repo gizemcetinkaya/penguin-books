@@ -1,4 +1,4 @@
-import Layout from "./components/Layout";
+import Layout from "./components/Layout/Layout";
 import { Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import Search from "./pages/Search";
