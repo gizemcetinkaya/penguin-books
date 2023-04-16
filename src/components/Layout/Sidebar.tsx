@@ -17,7 +17,7 @@ const Sidebar = () => {
                 </div>
                 <div className="space-y-48">
                     <ul className="text-center">
-                        <li className="p-5 text-[color:white]">
+                        <li className="p-5 text-[color:white] active">
                             <Link to="/" className="p-5">
                                 <FontAwesomeIcon icon={faMagnifyingGlass} />
                             </Link>
