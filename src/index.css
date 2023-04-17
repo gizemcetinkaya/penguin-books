@@ -7,6 +7,7 @@
 @layer base {
     html {
         font-family: 'Ubuntu', sans-serif;
+        overflow: hidden;
     }
 }
 
@@ -81,4 +82,18 @@ nav .search-button {
 button:disabled,
 button[disabled]{
   background-color: #e0e0e0;
+}
+
+@media (min-width: 320px) and (max-width: 640px) {
+    nav .logo{
+        width: 10rem;
+    }
+    nav .form-wrapper{
+        flex-direction: column;
+        width: 100%;
+        margin: 1rem 0;
+    }
+    nav .select-wrapper{
+        margin: 1rem 0 !important;
+    }
 }

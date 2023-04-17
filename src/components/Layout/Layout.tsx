@@ -8,7 +8,7 @@ const Layout = ({ children }: LayoutProps) => {
     return (
         <div className="flex flex-auto h-screen">
             <Sidebar />
-            <div className="grow">{children}</div>
+            <div className="grow overflow-y-auto">{children}</div>
         </div>
     )
 }

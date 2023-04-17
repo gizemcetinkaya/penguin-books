@@ -59,7 +59,7 @@ const SearchBar = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div className="mb-3 w-1/2 mx-auto space-y-6 flex flex-col form-wrapper">
+            <div className="mb-3 xl:w-1/2 lg:w-full mx-auto space-y-6 flex flex-col form-wrapper xs:w-full sm:w-full md:w-full">
                 <div className="relative flex items-center w-full h-12 rounded-md focus-within:shadow-lg overflow-hidden shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] input-wrapper">
                     <Input type="text" placeholder="Search for book title, author or ISBN" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
                     <Button
@@ -76,8 +76,8 @@ const SearchBar = () => {
                         <FontAwesomeIcon icon={faXmark} />
                     </Button>
                 </div>
-                <div className="select-wrapper flex justify-center">
-                    <div className="w-1/4 px-3 py-2 label">
+                <div className="select-wrapper flex justify-center xs:flex-col sm:flex-row md:flex-row">
+                    <div className="2xl:w-1/4 xl:w-full lg:w-full md:w-full px-3 py-2 label xs:w-full sm:w-full">
                         <label htmlFor="" className="text-[color:#818181]">
                             Search for a book by:
                         </label>

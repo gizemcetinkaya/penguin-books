@@ -11,12 +11,12 @@ interface SelectProps {
 }
 
 const Select = ({ defaultOption, options, selected, onChange }: SelectProps) => {
-    
+
     const ref = useRef<HTMLDivElement | null>(null);
     const [isOpen, setIsOpen] = useState(false);
 
     const handleClickOutside = (e: Event) => {
-        if(ref.current && !ref.current.contains(e.target as HTMLDivElement)) {
+        if (ref.current && !ref.current.contains(e.target as HTMLDivElement)) {
             setIsOpen(false);
         }
     }
@@ -28,11 +28,10 @@ const Select = ({ defaultOption, options, selected, onChange }: SelectProps) => 
         }
     }, [ref]);
 
-    // isopen sa down icon degilse up icon
     return (
-        <div className="flex flex-col w-1/3 select" ref={ref}>
-                <div className="w-full rounded-md bg-white px-3 py-2 text-sm text-gray-900 cursor-pointer flex justify-between"
-                    onClick={(e) => setIsOpen(!isOpen)}>{selected?.value ? selected.value : defaultOption} <FontAwesomeIcon icon={faSortDown} className="ml-2 align-top" style={{ color: '#6f6f6f' }} /></div>
+        <div className="flex flex-col select xs:w-full sm:w-full md:w-full lg:w-full xl:w-full 2xl:w-1/3" ref={ref}>
+            <div className="w-full rounded-md bg-white px-3 py-2 text-sm text-gray-900 cursor-pointer flex justify-between"
+                onClick={(e) => setIsOpen(!isOpen)}>{selected?.value ? selected.value : defaultOption} <FontAwesomeIcon icon={faSortDown} className="ml-2 align-top" style={{ color: '#6f6f6f' }} /></div>
             {isOpen &&
                 <div className="w-full rounded-md bg-white shadow-lg focus:outline-none options">
                     {

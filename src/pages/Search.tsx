@@ -15,7 +15,7 @@ const Search = () => {
     return (
         <>
             <Navbar />
-            <div className="container mx-auto p-4 h-screen">
+            <div className="container mx-auto p-4 xs:p-0 sm:p-0 md:p-4">
                 <SearchResults searchResults={data!} status={status} error={error!} isError={isError} />
             </div>
         </>
