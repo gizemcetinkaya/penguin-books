@@ -24,6 +24,32 @@ nav .input-wrapper input{
 nav .select-wrapper{
     order: 1;
     margin: 0.75rem 1rem 0 0 !important;
+    min-width: 7rem;
+}
+nav .select-wrapper div {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+nav .select-wrapper .label {
+    display: none;
+}
+
+nav .select-wrapper .select {
+    position: relative;
+}
+
+nav .select-wrapper .options {
+    position: absolute;
+    top: 35px;
+    min-width: 200px;
+    z-index: 1;
+    right: 0;
+    background: #FFF;
+}
+
+nav .select-wrapper .options div {
+    padding: 0.5rem 1rem;
 }
 
 nav .select-wrapper label {
@@ -50,4 +76,9 @@ nav .search-button {
 .sidebar-wrapper .active {
     border-left: 3px solid #f26522;
     background-color:rgba(53, 67, 89, 0.5);
+}
+
+button:disabled,
+button[disabled]{
+  background-color: #e0e0e0;
 }

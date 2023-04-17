@@ -10,13 +10,13 @@ const Search = () => {
     const searchText: string = params.get("q")!;
     const searchType: string = params.get("type")!;
 
-    const { status, data } = useSearchData({searchText, searchType});
+    const { status, error, isError, data } = useSearchData({searchText, searchType});
 
     return (
         <>
             <Navbar />
             <div className="container mx-auto p-4 h-screen">
-                <SearchResults searchResults={data!} status={status} />
+                <SearchResults searchResults={data!} status={status} error={error!} isError={isError} />
             </div>
         </>
     );

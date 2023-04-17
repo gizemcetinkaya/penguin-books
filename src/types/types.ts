@@ -45,3 +45,20 @@ export enum BookFormat {
   Ebook = "E-book",
   Audiobook = "Audiobook",
 }
+
+export type Option = {
+  key: string | null;
+  value: string | null;
+}
+
+export interface ErrorResponseDto {
+  response: Response;
+}
+
+export interface Response {
+  data: Message;
+}
+
+export interface Message {
+  message: string;
+}
