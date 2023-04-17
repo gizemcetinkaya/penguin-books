@@ -1,20 +1,18 @@
 import { ErrorResponseDto, SearchResult } from "../../types/types";
-
-import Result from "../UI/Result";
+import CardList from "../UI/CardList";
 
 interface SearchResultProps {
     searchResults: SearchResult;
     status: string;
-    error: ErrorResponseDto;
-    isError: boolean;
+    error?: ErrorResponseDto;
 }
 
-const SearchResults = ({ searchResults, status, error, isError }: SearchResultProps) => {
+const SearchResults = ({ searchResults, status, error }: SearchResultProps) => {
 
     return (
         <div className="p-4 rounded-lg mt-14">
-            <Result status={status} error={error} isError={isError} results={searchResults && searchResults.topResults} title="Top results" />
-            <Result status={status} error={error} isError={isError} results={searchResults && searchResults.relatedResults} title="Related" />
+            <CardList status={status} error={error} results={searchResults?.topResults} title="Top results" />
+            <CardList status={status} error={error} results={searchResults?.relatedResults} title="Related" />
         </div>
     );
 }

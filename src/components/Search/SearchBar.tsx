@@ -30,13 +30,14 @@ const SearchBar = () => {
 
     const [searchParams] = useSearchParams();
 
-    const searchText = searchParams.get("q");
-    const searchType = searchParams.get("type");
+    const searchText = searchParams.get("q") || "";
+    const searchType = searchParams.get("type") || "";
+
 
     const defaultOption = searchText || searchType ? "Smart search" : "our Smart Search algorithm";
 
-    const [searchValue, setSearchValue] = useState<string>(searchText || "");
-    const [selectedOption, setSelectedOption] = useState<Option>({ key: searchType || "", value: searchType || "" });
+    const [searchValue, setSearchValue] = useState<string>(searchText);
+    const [selectedOption, setSelectedOption] = useState<Option>({ key: searchType, value: searchType });
 
     const navigateSearch = () => {
         const q = searchValue && `q=${searchValue.trim()}`;
@@ -55,6 +56,7 @@ const SearchBar = () => {
         if (location.pathname === "/search" && selectedOption) {
             navigateSearch();
         }
+        
     }, [selectedOption]);
 
     return (
